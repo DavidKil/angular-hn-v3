@@ -1,0 +1,35 @@
+
+
+
+
+<div  class="story-container"
+infinite-scroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="0"
+  [infiniteScrollDisabled]="isLoading"
+  (scrolled)="loadStories()">
+  <div class="header"><h1>Hacker News v3.0</h1></div>
+   <mat-button-toggle-group class="toggle-group" value="All" name="fontStyle" (change)="toggleStoryType($event.value)" aria-label="Font Style">
+    <mat-button-toggle class="toggle-group-button" value="topstories">Top</mat-button-toggle>
+    <mat-button-toggle class="toggle-group-button" value="newstories">New</mat-button-toggle>
+    <mat-button-toggle class="toggle-group-button" value="beststories">Best</mat-button-toggle>
+  </mat-button-toggle-group>
+
+<app-loader [loader]="isLoading"></app-loader>
+<div class="left-padding"></div>
+<div class="list-container"><ul class="stories">
+  <li *ngFor="let story of stories">
+    <a >
+      <div class="badge" (click)="openLink(story.url)">{{ story.title || -1 }}</div>
+      <div class="subtitle">{{ story.score || 0 }} points by {{ story.by || '' }}</div>
+      
+      <div class="domain" *ngIf="story.domain !== ''">({{ story.domain }})</div>
+    </a>
+  </li>
+</ul></div><div class="right-padding"></div>
+
+</div>
+
+
+
+

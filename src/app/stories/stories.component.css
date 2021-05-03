@@ -1,0 +1,144 @@
+/* StoriesComponent's private CSS styles */
+.search input {
+  margin: 1rem 0;
+}
+
+.stories {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.stories li {
+  position: relative;
+}
+
+.stories li:hover {
+  left: .1em;
+}
+
+
+.stories a {
+  color: black;
+  display: block;
+  font-size: 1.2rem;
+  background-color: #eee;
+  margin: .5em 0;
+  padding: .5em 0;
+  border-radius: 4px;
+}
+
+.stories a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.stories .badge {
+  padding: .5em .6em;
+  color: white;
+  background-color: #435B60;
+  min-width: 16px;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+button.delete {
+  position: absolute;
+  right: -8px;
+  top: 5px;
+  background-color: gray;
+  color: white;
+  padding: 5px 8px;
+  width: 2em;
+}
+
+.stories input {
+  max-width: 12rem;
+  padding: .25rem;
+  position: absolute;
+  top: 8px;
+}
+
+.stories.domain {
+  font-size: 12px;
+}
+
+.toggle-group {
+  position: absolute;
+  left: 50%;
+  top:7%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-group-button {
+  background-color: lightgray;
+}
+
+.toggle-group-button.mat-button-toggle-checked {
+  background-color: black;
+  color: white;
+}
+
+.story-container h1 {
+  text-align: center
+}
+
+
+
+.left-padding {
+  left: -25%;
+  text-align: right;
+}
+
+.right-padding {
+  right: -25%;
+  text-align: left;
+}
+
+.list-container {
+  left: 20%;
+  width:60%;
+  position:absolute;
+  top:10%;
+  text-align: center;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+ }
+ .show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+ }
+
+ #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
